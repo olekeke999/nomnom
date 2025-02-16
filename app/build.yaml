@@ -1,0 +1,33 @@
+targets:
+  $default:
+    sources:
+      - test/**
+      - lib/**
+      - $package$
+    builders:
+      bdd_widget_test|featureBuilder:
+        options:
+          stepFolderName: step # this trick is required to share steps between widget and integration tests
+          # testMethodName: customTestMethodName
+          include: #package:bdd_widget_test/bdd_options.yaml # you may add defaul external steps with this line
+          externalSteps: # or list only steps that you need
+        generate_for:
+          - test/**
+      i69n|yamlBasedBuilder:
+        generate_for:
+          - lib/src/localization/translation/translations*.i69n.yaml    
+          - lib/localization/translation/translations*.i69n.yaml    
+      auto_route_generator|autoRouteGenerator:
+        generate_for:
+          - lib/**/routes/**.dart    
+      freezed|freezed:
+        generate_for:
+          - lib/repository/** # we need to replace all entities from this folder
+          - lib/**/bloc/*.dart
+          - lib/**/models/*.dart
+      json_serializable:
+        generate_for:
+          - lib/**/models/*.dart
+          - lib/repository/** # we need to replace all entities from this folder
+        options:
+          explicit_to_json: true

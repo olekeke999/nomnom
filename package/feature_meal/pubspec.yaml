@@ -1,0 +1,39 @@
+name: feature_meal
+description: nomnom FeatureMeal Feature
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies:
+  auto_route: ^8.0.3
+  bloc_concurrency: ^0.2.5
+  dartz: ^0.10.1
+  dio: ^5.4.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.4
+  flutter_localizations:
+    sdk: flutter
+  freezed_annotation: ^2.4.1
+  get_it: ^8.0.0
+  injectable: ^2.3.2
+  retrofit: ^4.1.0
+  i69n: ^3.0.0
+
+dev_dependencies:
+  auto_route_generator: ^8.0.0
+  build_runner: ^2.0.0
+  core_linter:
+    path: ../core_linter
+  flutter_test:
+    sdk: flutter
+  freezed: ^2.4.7
+  injectable_generator: ^2.4.1
+  json_serializable: ^6.7.1
+  retrofit_generator: ^8.1.0
+
+flutter:
+  uses-material-design: true

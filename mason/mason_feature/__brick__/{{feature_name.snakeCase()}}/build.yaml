@@ -1,0 +1,29 @@
+targets:
+  $default:
+    sources:
+      - test/**
+      - lib/**
+      - $package$
+    builders:
+      i69n|yamlBasedBuilder:
+        generate_for:
+          - lib/src/localization/translation/translations*.i69n.yaml
+      auto_route_generator:auto_route_generator:
+        generate_for:
+          - lib/src/pages/*
+      auto_route_generator:auto_router_generator:
+        generate_for:
+          - lib/src/routes/*
+      freezed|freezed:
+        generate_for:
+          - lib/src/flows/*/repository/remote/*
+          - lib/src/flows/*/bloc/*.dart
+          - lib/src/flows/bloc/*.dart
+          - lib/src/repository/remote/*.dart
+          - lib/src/models/**
+      json_serializable:
+        generate_for:
+          - lib/src/models/**
+        options:
+          field_rename: snake
+          explicit_to_json: true
