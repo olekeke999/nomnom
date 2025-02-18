@@ -4,9 +4,12 @@ packages:
   - app/
   - package/**
 
+ignore:
+  - 'package/core_linter'
+
 scripts:
   flutter:pub_get:
-    run: melos exec -- dart pub get
+    run: melos exec -c 1  -- "flutter pub get"
     description: Runs `dart pub get` in all flutter packages, to generate files
       which `melos bootstrap` doesn't.
     packageFilters:
@@ -15,6 +18,13 @@ scripts:
 
   generate:flutter:
     run: melos exec -c 1 -- "flutter pub run build_runner build --delete-conflicting-outputs"
+    description: Build all generated files for Flutter packages in this project.
+    packageFilters:
+      flutter: true
+    orderDependents: true
+
+  upgrade_packages:
+    run: melos exec -c 1 -- "find $(pwd) -name 'pubspec_overrides.yaml' -delete && flutter pub upgrade --major-versions && melos bs"
     description: Build all generated files for Flutter packages in this project.
     packageFilters:
       flutter: true

@@ -5,16 +5,18 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.2.6 <4.0.0'
+  sdk: '>=3.7.0 <4.0.0'
 
 dependencies:
-  auto_route: ^8.0.3
-  bloc_concurrency: ^0.2.5
+  auto_route: ^9.0.0
+  bloc_concurrency: ^0.3.0
   dartz: ^0.10.1
   dio: ^5.4.0
+  core_data:
+    path: ../core_data
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.4
+  flutter_bloc: ^9.0.0
   flutter_localizations:
     sdk: flutter
   freezed_annotation: ^2.4.1
@@ -24,7 +26,7 @@ dependencies:
   i69n: ^3.0.0
 
 dev_dependencies:
-  auto_route_generator: ^8.0.0
+  auto_route_generator: ^9.0.0
   build_runner: ^2.0.0
   core_linter:
     path: ../core_linter
@@ -33,7 +35,7 @@ dev_dependencies:
   freezed: ^2.4.7
   injectable_generator: ^2.4.1
   json_serializable: ^6.7.1
-  retrofit_generator: ^8.1.0
+  retrofit_generator: ^9.1.9
 
 flutter:
   uses-material-design: true

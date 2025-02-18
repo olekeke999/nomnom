@@ -5,12 +5,14 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.5.4
+  sdk: '>=3.7.0 <4.0.0'
 
 dependencies:
-  auto_route: ^8.0.0
+  auto_route: ^9.0.0
   core_linter:
     path: ../package/core_linter
+  core_data:
+    path: ../package/core_data
   cupertino_icons: ^1.0.8
   feature_meal:
     path: ../package/feature_meal
@@ -23,10 +25,10 @@ dependencies:
   injectable: ^2.3.2
 
 dev_dependencies:
-  auto_route_generator: ^8.0.0
+  auto_route_generator: ^9.0.0
   bdd_widget_test: ^1.6.4
   build_runner: ^2.0.0
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
   freezed: ^2.4.6

@@ -1,6 +1,6 @@
-# melos_managed_dependency_overrides: core_linter,feature_meal
+# melos_managed_dependency_overrides: core_data,feature_meal
 dependency_overrides:
-  core_linter:
-    path: ../package/core_linter
+  core_data:
+    path: ../package/core_data
   feature_meal:
     path: ../package/feature_meal

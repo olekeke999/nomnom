@@ -1,5 +1,5 @@
-name: { { feature_name.snakeCase() } }
-description: nomnom {{feature_name.pascalCase()}} Feature
+name: core_data
+description: nomnom CoreData Feature
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
@@ -9,31 +9,36 @@ environment:
 
 dependencies:
   auto_route: ^9.0.0
-  bloc_concurrency: ^0.2.5
+  bloc_concurrency: ^0.3.0
   dartz: ^0.10.1
   dio: ^5.4.0
+  drift: ^2.25.1
+  drift_flutter: ^0.2.4
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.4
+  flutter_bloc: ^9.0.0
   flutter_localizations:
     sdk: flutter
   freezed_annotation: ^2.4.1
   get_it: ^8.0.0
   injectable: ^2.3.2
   retrofit: ^4.1.0
+  shared_preferences: ^2.5.2
+  uuid: ^4.5.1
 
 dev_dependencies:
   auto_route_generator: ^9.0.0
   build_runner: ^2.0.0
   core_linter:
     path: ../core_linter
+  drift_dev: ^2.25.2
   flutter_test:
     sdk: flutter
   freezed: ^2.4.7
   i69n: ^3.0.0
   injectable_generator: ^2.4.1
   json_serializable: ^6.7.1
-  retrofit_generator: ^8.1.0
+  retrofit_generator: ^9.1.9
 
 flutter:
   uses-material-design: true
